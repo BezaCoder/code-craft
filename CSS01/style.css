@@ -115,6 +115,7 @@ h1 {
 }
 .team {
   padding: 40px 0;
+  background-color: #e0e7ee;
 }
 .team .container {
   display: flex;
