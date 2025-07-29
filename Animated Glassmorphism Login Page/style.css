@@ -106,13 +106,19 @@ section {
     transform: translateX(-105%) translateY(0);
   }
   90% {
-    transform: translateX(-120%) translateY(0);
+    transform: translateX(-130%) translateY(0);
+  }
+  92% {
+    transform: translateX(-155%) translateY(0);
   }
   95% {
-    transform: translateX(-135%) translateY(0);
+    transform: translateX(-180%) translateY(0);
+  }
+  97% {
+    transform: translateX(-205%) translateY(0);
   }
   100% {
-    transform: translateX(-150%) translateY(0);
+    transform: translateX(-230%) translateY(0);
   }
 }
 
