@@ -1,0 +1,305 @@
+/* Name: Bezawit  Yeshiwas
+  Animations: girlRidingBike, fallingleaves and Login */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.trees {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  z-index: 3;
+}
+
+.girl {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 90%;
+  object-fit: contain;
+  z-index: 2;
+
+  animation: girlRidingBike 8s ease-in-out infinite;
+}
+
+@keyframes girlRidingBike {
+  0% {
+    transform: translateX(150%) translateY(0);
+  }
+  5% {
+    transform: translateX(135%) translateY(0);
+  }
+  10% {
+    transform: translateX(120%) translateY(0);
+  }
+  15% {
+    transform: translateX(105%) translateY(0);
+  }
+  20% {
+    transform: translateX(90%) translateY(0);
+  }
+  25% {
+    transform: translateX(75%) translateY(0);
+  }
+  30% {
+    transform: translateX(60%) translateY(0);
+  }
+  35% {
+    transform: translateX(45%) translateY(0);
+  }
+  40% {
+    transform: translateX(30%) translateY(0);
+  }
+  45% {
+    transform: translateX(15%) translateY(0);
+  }
+  50% {
+    transform: translateX(0%) translateY(0);
+  }
+  55% {
+    transform: translateX(-15%) translateY(0);
+  }
+  60% {
+    transform: translateX(-30%) translateY(0);
+  }
+  65% {
+    transform: translateX(-45%) translateY(0);
+  }
+  70% {
+    transform: translateX(-60%) translateY(0);
+  }
+  75% {
+    transform: translateX(-75%) translateY(0);
+  }
+  80% {
+    transform: translateX(-90%) translateY(0);
+  }
+  85% {
+    transform: translateX(-105%) translateY(0);
+  }
+  90% {
+    transform: translateX(-120%) translateY(0);
+  }
+  95% {
+    transform: translateX(-135%) translateY(0);
+  }
+  100% {
+    transform: translateX(-150%) translateY(0);
+  }
+}
+
+.leaves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.leaves .set {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.leaves .set div {
+  position: absolute;
+  display: block;
+}
+
+.leaves .set div img {
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+/*  leaf animations */
+.leaves .set div:nth-child(1) {
+  left: 20%;
+  animation: fallingleaves 15s linear infinite;
+  animation-delay: -2s;
+}
+.leaves .set div:nth-child(2) {
+  left: 50%;
+  animation: fallingleaves 12s linear infinite;
+  animation-delay: -5s;
+}
+.leaves .set div:nth-child(3) {
+  left: 70%;
+  animation: fallingleaves 18s linear infinite;
+  animation-delay: -8s;
+}
+.leaves .set div:nth-child(4) {
+  left: 5%;
+  animation: fallingleaves 14s linear infinite;
+  animation-delay: -11s;
+}
+.leaves .set div:nth-child(5) {
+  left: 85%;
+  animation: fallingleaves 16s linear infinite;
+  animation-delay: -14s;
+}
+.leaves .set div:nth-child(6) {
+  left: 15%;
+  animation: fallingleaves 13s linear infinite;
+  animation-delay: -3s;
+}
+.leaves .set div:nth-child(7) {
+  left: 60%;
+  animation: fallingleaves 17s linear infinite;
+  animation-delay: -6s;
+}
+.leaves .set div:nth-child(8) {
+  left: 30%;
+  animation: fallingleaves 10s linear infinite;
+  animation-delay: -9s;
+}
+
+@keyframes fallingleaves {
+  0% {
+    opacity: 1;
+    top: -10%;
+    transform: translateX(0) rotateZ(0deg);
+  }
+  20% {
+    transform: translateX(20px) rotateZ(90deg);
+  }
+  40% {
+    transform: translateX(-20px) rotateZ(180deg);
+  }
+  60% {
+    transform: translateX(20px) rotateZ(270deg);
+  }
+  80% {
+    transform: translateX(-20px) rotateZ(360deg);
+  }
+  100% {
+    opacity: 0;
+    top: 110%;
+    transform: translateX(0) rotateZ(720deg);
+  }
+}
+
+.login {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.208);
+  backdrop-filter: blur(10px);
+  width: 450px;
+  height: 500px;
+  padding: 40px;
+  border-radius: 15px;
+  border: 0.5px solid rgba(255, 255, 255, 0.56);
+  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.097);
+  z-index: 5;
+
+  animation: Login 6s ease-in-out infinite;
+}
+
+@keyframes Login {
+  0% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-10px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+}
+
+.login div {
+  width: 100%;
+}
+
+h2 {
+  width: 100%;
+  text-align: center;
+  color: #90281f;
+  font-size: 3rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  color: #90281f;
+  outline: none;
+  text-transform: capitalize;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.inputBox input::placeholder {
+  color: #90281f;
+}
+
+#btn {
+  background-color: #90281f;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#btn:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
+}
+
+.group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.group a {
+  color: #90281f;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.group a:hover {
+  text-decoration: underline;
+}
+
+.forget {
+  text-decoration: none;
+}
